@@ -1,0 +1,225 @@
+/* Additional Global Transitions and Enhancements */
+
+/* ==========================================
+   FADE-IN TEXT ANIMATIONS FOR HOME PAGE
+   ========================================== */
+
+/* Fade-in text animations for home page */
+.fade-in-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay variations for staggered animations */
+.fade-in-text[data-delay="0.2"] {
+    transition-delay: 0s;
+}
+
+.fade-in-text[data-delay="0.2"].visible {
+    transition-delay: 0.2s;
+}
+
+.fade-in-text[data-delay="0.4"] {
+    transition-delay: 0s;
+}
+
+.fade-in-text[data-delay="0.4"].visible {
+    transition-delay: 0.4s;
+}
+
+.fade-in-text[data-delay="0.6"] {
+    transition-delay: 0s;
+}
+
+.fade-in-text[data-delay="0.6"].visible {
+    transition-delay: 0.6s;
+}
+
+.fade-in-text[data-delay="0.8"] {
+    transition-delay: 0s;
+}
+
+.fade-in-text[data-delay="0.8"].visible {
+    transition-delay: 0.8s;
+}
+
+.fade-in-text[data-delay="1"] {
+    transition-delay: 0s;
+}
+
+.fade-in-text[data-delay="1"].visible {
+    transition-delay: 1s;
+}
+
+/* ==========================================
+   MEDIA ELEMENTS & OTHER TRANSITIONS
+   ========================================== */
+
+/* Smooth transitions for all media elements */
+img,
+video,
+iframe {
+    transition: var(--transition-smooth);
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Link arrow enhanced */
+.link-arrow {
+    transition: var(--transition-smooth);
+}
+
+.link-arrow:hover {
+    color: var(--color-gold);
+}
+
+/* Enhanced media card transitions */
+.media-card {
+    transition: var(--transition-smooth);
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Channel info card */
+.channel-info-card {
+    transition: var(--transition-smooth);
+}
+
+.channel-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Topic tags with transitions */
+.topic-tag {
+    transition: var(--transition-base);
+}
+
+.topic-tag:hover {
+    background: var(--color-gold);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Magazine cards enhanced */
+.magazine-card {
+    transition: var(--transition-smooth);
+}
+
+.magazine-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.magazine-card h4 {
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+    transition: var(--transition-base);
+}
+
+/* Gallery items enhanced */
+.gallery-item {
+    transition: var(--transition-smooth);
+}
+
+.gallery-item:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+/* Culture cards enhanced */
+.culture-card h3 {
+    font-weight: 800;
+    font-size: var(--font-size-h3);
+    transition: var(--transition-base);
+}
+
+.culture-card p {
+    font-size: var(--font-size-p);
+    font-weight: 500;
+    transition: var(--transition-base);
+}
+
+/* Contact section enhanced */
+#contact h2 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: var(--font-size-h1);
+    transition: var(--transition-smooth);
+}
+
+#contact h5 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: var(--transition-base);
+}
+
+/* Midnight purple section text enhanced */
+.midnight-purple-section h2 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    transition: var(--transition-smooth);
+}
+
+.midnight-purple-section .section-text {
+    font-size: var(--font-size-p);
+    font-weight: 500;
+}
+
+/* Philosophy cards enhanced */
+.philosophy-card h3,
+.philosophy-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: var(--font-size-h3);
+    transition: var(--transition-base);
+}
+
+.philosophy-subtitle {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Employee story cards */
+.employee-story-card {
+    transition: var(--transition-smooth);
+}
+
+.employee-name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    transition: var(--transition-base);
+}
+
+.story-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    transition: var(--transition-base);
+}
+
+/* Timeline enhanced */
+.timeline-year {
+    font-weight: 700;
+    font-size: 1rem;
+    transition: var(--transition-base);
+}
+
+.timeline-content-new h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: var(--font-size-h3);
+    transition: var(--transition-base);
+}

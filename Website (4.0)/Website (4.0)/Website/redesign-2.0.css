@@ -1,0 +1,152 @@
+/* ==========================================
+   REDESIGN 2.0: ROBUST ADVANCED
+   ========================================== */
+
+:root {
+    --hero-gradient-1: #0f2027;
+    --hero-gradient-2: #203a43;
+    --hero-gradient-3: #2c5364;
+    --accent-gold: #D4AF37;
+    --text-editorial: 'Playfair Display', serif;
+}
+
+/* 1. IMMERSIVE HERO (Animated Gradient) */
+.hero-section {
+    background: linear-gradient(-45deg, var(--hero-gradient-1), var(--hero-gradient-2), var(--hero-gradient-3), #000000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hero Overlay Texture */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* 2. EDITORIAL TYPOGRAPHY */
+.display-1,
+.section-title,
+.hero-title {
+    font-family: var(--text-editorial);
+    letter-spacing: -0.02em;
+}
+
+.hero-title {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    background: linear-gradient(to right, #fff, #ccc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.section-label {
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* 3. HORIZONTAL SCROLL SECTION (Refined) */
+.horizontal-scroll-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+    color: #fff;
+}
+
+.horizontal-scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.horizontal-panel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.horizontal-panel h3 {
+    font-family: var(--text-editorial);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-gold);
+}
+
+.horizontal-panel p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* 4. 3D CARD TILT (Vanilla JS Targets) */
+.director-card {
+    transition: transform 0.1s;
+    /* Quick response for JS tilt */
+    transform-style: preserve-3d;
+}
+
+.director-img {
+    transform: translateZ(20px);
+    /* Depth effect */
+}
+
+.director-name {
+    transform: translateZ(30px);
+}
+
+/* 5. EDITORIAL NAVBAR */
+.navbar {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrolled-editorial {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px 0 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}

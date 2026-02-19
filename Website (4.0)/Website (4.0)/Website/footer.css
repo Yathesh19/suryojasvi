@@ -1,0 +1,168 @@
+/* ==========================================
+   GOD TIER FOOTER (Static Layout)
+   ========================================== */
+
+/* The Curtain Effect - DISABLED per user request */
+/* body {
+    /* Ensure body allows footer to be revealed */
+/*    position: relative;
+    z-index: 1;
+} */
+
+main {
+    position: relative;
+    z-index: 2;
+    background: var(--bg-cream);
+    min-height: 100vh;
+    /* Simple way to ensure footer stays at bottom */
+    margin-bottom: 0 !important;
+    /* Reset margin */
+    box-shadow: none !important;
+    flex: 1;
+    /* Pushes footer down */
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    background: #0a0a0a;
+    color: #fff;
+    /* Sticky Footer */
+    /* Prevent footer from shrinking */
+    padding: 20px 0 5px !important;
+    /* Ultra Compact */
+    display: block;
+    overflow: visible;
+}
+
+/* Standard Typography -> Logo Sized */
+.footer-brand-huge {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    /* Logo size */
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    opacity: 0.8;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+}
+
+/* Editorial Links */
+.footer-heading {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.65rem;
+    /* Micro heading */
+    color: var(--color-gold);
+    margin-bottom: 0.5rem !important;
+    opacity: 0.8;
+}
+
+.footer-links-editorial {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-editorial li {
+    margin-bottom: 0.25rem !important;
+    /* Tighter links */
+    line-height: 1.2;
+}
+
+.footer-links-editorial a {
+    font-family: var(--font-sans);
+    /* Switch to readable sans */
+    font-size: 0.8rem !important;
+    /* Small text */
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links-editorial a:hover {
+    color: var(--color-gold);
+    transform: translateX(3px);
+}
+
+/* Live Clocks */
+.live-clock {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Faint border */
+    padding-bottom: 0.1rem;
+    margin-bottom: 0.25rem !important;
+}
+
+.live-clock .city {
+    font-family: var(--font-sans);
+    /* Cleaner font */
+    font-size: 0.75rem !important;
+    font-style: normal;
+    color: #666;
+}
+
+.live-clock .time {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    color: var(--color-gold);
+    font-size: 0.75rem !important;
+}
+
+/* Socials Minimal */
+.socials-minimal .social-link {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 0.7rem;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.socials-minimal .social-link:hover {
+    opacity: 1;
+    color: var(--color-gold);
+}
+
+/* Human Signature */
+.human-signature {
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+    transform: scale(0.8);
+    /* Scale down entire signature block */
+    transform-origin: right top;
+}
+
+.human-signature:hover {
+    transform: rotate(-2deg) scale(1.05);
+    opacity: 1;
+}
+
+.signature-img {
+    display: block;
+    margin-bottom: 0px;
+    width: 80px !important;
+}
+
+@media (max-width: 991px) {
+    main {
+        margin-bottom: 0 !important;
+        /* Disable curtain on mobile if too complex */
+    }
+
+    footer {
+        position: relative;
+        height: auto;
+        z-index: 2;
+        padding: 60px 0;
+    }
+
+    .footer-brand-huge {
+        font-size: 4rem;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.1);
+    }
+}
